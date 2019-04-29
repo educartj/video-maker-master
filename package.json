@@ -1,5 +1,5 @@
 {
-  "name": "video-maker-master",
+  "name": "video-maker",
   "version": "1.0.0",
   "description": "Projeto open source para fazer vídeos automatizados",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/educartj/video-maker-master.git"
+    "url": "git+https://github.com/filipedeschamps/video-maker.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/educartj/video-maker-master/issues"
+    "url": "https://github.com/filipedeschamps/video-maker/issues"
   },
-  "homepage": "https://github.com/educartj/video-maker-master#readme",
+  "homepage": "https://github.com/filipedeschamps/video-maker#readme",
   "dependencies": {
     "algorithmia": "^0.3.10",
     "express": "^4.16.4",
@@ -23,7 +23,7 @@
     "googleapis": "^38.0.0",
     "image-downloader": "^3.4.2",
     "readline-sync": "^1.4.9",
-    "sbd": "^1.0.14",
+    "sbd": "^1.0.15",
     "watson-developer-cloud": "^3.18.2"
   }
 }
