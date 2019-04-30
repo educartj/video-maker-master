@@ -6,7 +6,7 @@ File: `algorithmia.json`
 
 ```
 {
-  "apiKey": "simU6h5QfVb0oCWxumcUp/DEZYV1"
+  "apiKey": "simU6h5QfVb0oCWxumcUp"
 }
 ```
 
