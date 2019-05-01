@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/filipedeschamps/video-maker.git"
+    "url": "git+https://github.com/educartj/video-maker-master.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/filipedeschamps/video-maker/issues"
+    "url": "https://github.com/educartj/video-maker-master/issues"
   },
-  "homepage": "https://github.com/filipedeschamps/video-maker#readme",
+  "homepage": "https://github.com/educartj/video-maker-master#readme",
   "dependencies": {
     "algorithmia": "^0.3.10",
     "express": "^4.16.4",
@@ -23,7 +23,8 @@
     "googleapis": "^38.0.0",
     "image-downloader": "^3.4.2",
     "readline-sync": "^1.4.9",
+    "rss-parser": "^3.7.0",
     "sbd": "^1.0.15",
-    "watson-developer-cloud": "^3.18.2"
+    "watson-developer-cloud": "^3.18.4"
   }
 }
