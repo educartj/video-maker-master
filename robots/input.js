@@ -21,7 +21,7 @@ function robot() {
 
     return selectedPrefixText
   }
-//  console.log(content)
+
 }
 
 module.exports = robot

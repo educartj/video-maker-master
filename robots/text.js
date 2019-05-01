@@ -103,7 +103,7 @@ async function robot() {
       })
     })
   }
-  console.log(JSON.stringify(content, null, 4))
+
 }
 
 module.exports = robot

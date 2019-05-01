@@ -13,7 +13,8 @@ async function start() {
   //await robots.image()
   //await robots.video()
   //await robots.youtube()
-
+  const content = robots.state.load()
+  console.dir(content, { depth: null})
 }
 
 start()
