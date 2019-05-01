@@ -1,4 +1,4 @@
-const imageDownloader = require('image-downloader')
+//const imageDownloader = require('image-downloader')
 const google = require('googleapis').google
 const customSearch = google.customsearch('v1')
 const state = require('./state.js')
@@ -8,8 +8,14 @@ const googleSearchCredentials = require('../credentials/google-search.json')
 async function robot() {
   const content = state.load()
 
+
+	
+//  const imagesArray = await fetchGoogleAndReturnImagesLinks('Michael Jackson')
+//console.dir(imagesArray, { depth: null})
+//process.exit(0)  
+  
   await fetchImagesOfAllSentences(content)
-  await downloadAllImages(content)
+//  await downloadAllImages(content)
 
   state.save(content)
 
@@ -33,12 +39,13 @@ async function robot() {
 
     const imagesUrl = response.data.items.map((item) => {
       return item.link
+     
     })
 
     return imagesUrl
   }
 
-  async function downloadAllImages(content) {
+/*  async function downloadAllImages(content) {
     content.downloadedImages = []
 
     for (let sentenceIndex = 0; sentenceIndex < content.sentences.length; sentenceIndex++) {
@@ -69,7 +76,7 @@ async function robot() {
       dest: `./content/${fileName}`
     })
   }
-
+*/
 }
 
 module.exports = robot
