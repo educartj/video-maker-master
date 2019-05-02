@@ -15,7 +15,6 @@ async function start() {
   //await robots.youtube()
   const content = robots.state.load()
   console.dir(content, { depth: null})
-  
 }
 
 start()

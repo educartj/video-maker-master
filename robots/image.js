@@ -7,8 +7,6 @@ const googleSearchCredentials = require('../credentials/google-search.json')
 
 async function robot() {
   const content = state.load()
-
-
 	
 //  const imagesArray = await fetchGoogleAndReturnImagesLinks('Michael Jackson')
 //console.dir(imagesArray, { depth: null})
