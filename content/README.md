@@ -1,3 +1,3 @@
 # Content Folder
 
-Folder for downloaded or generated content
+Folder for download or generated content
