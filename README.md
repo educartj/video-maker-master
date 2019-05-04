@@ -1,7 +1,7 @@
 # video-maker
 Projeto open source para fazer vídeos automatizados
 
-projeto original (https://github.com/filipedeschamps/video-maker) [https://github.com/filipedeschampslipe]
+projeto original (https://github.com/filipedeschamps/video-maker) [Filipe Deschamps]
 
 # Pré requisitos
 
