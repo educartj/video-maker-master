@@ -1,18 +1,19 @@
 const gm = require('gm').subClass({imageMagick: true})
 const state = require('./state.js')
-//const spawn = require('child_process').spawn
+const spawn = require('child_process').spawn
 const path = require('path')
 const rootPath = path.resolve(__dirname, '..')
 
 
 async function robot() {
+  console.log('> [video-robot] Starting...')
   const content = state.load()
 
   await convertAllImages(content)
   await createAllSentenceImages(content)
   await createYouTubeThumbnail()
-//  await createAfterEffectsScript(content)
-//  await renderVideoWithAfterEffects()
+  await createAfterEffectsScript(content)
+  await renderVideoWithAfterEffects()
 
   state.save(content)
 
@@ -54,7 +55,7 @@ async function robot() {
             return reject(error)
           }
 
-          console.log(`> Image converted: ${inputFile}`)
+          console.log(`> [video-robot] Image converted: ${outputFile}`)
           resolve()
         })
 
@@ -115,7 +116,7 @@ async function robot() {
             return reject(error)
           }
 
-          console.log(`> Sentence created: ${outputFile}`)
+          console.log(`> [video-robot] Sentence created: ${outputFile}`)
           resolve()
         })
     })
@@ -130,23 +131,23 @@ async function robot() {
             return reject(error)
           }
 
-          console.log('> Creating YouTube thumbnail')
+          console.log('> [video-robot] YouTube thumbnail created')
           resolve()
         })
     })
   }
-/*
+
   async function createAfterEffectsScript(content) {
     await state.saveScript(content)
   }
 
   async function renderVideoWithAfterEffects() {
     return new Promise((resolve, reject) => {
-      const aerenderFilePath = '/Applications/Adobe After Effects CC 2019/aerender'
+      const aerenderFilePath = 'C:/Program Files/Adobe/Adobe After Effects CC 2019/Support Files/aerender.exe'
       const templateFilePath = `${rootPath}/templates/1/template.aep`
       const destinationFilePath = `${rootPath}/content/output.mov`
 
-      console.log('> Starting After Effects')
+      console.log('> [video-robot] Starting After Effects')
 
       const aerender = spawn(aerenderFilePath, [
         '-comp', 'main',
@@ -159,12 +160,12 @@ async function robot() {
       })
 
       aerender.on('close', () => {
-        console.log('> After Effects closed')
+        console.log('> [video-robot] After Effects closed')
         resolve()
       })
     })
   }
-*/
+
 }
 
 module.exports = robot
